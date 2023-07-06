@@ -1,7 +1,7 @@
 .row {
     width: $grid-width;
     margin: 0 auto;
-    margin-bottom: $gutter-vertical;
+    // margin-bottom: $gutter-vertical;
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
@@ -11,11 +11,23 @@
         }
     }
 
+
+    @include respond(tab-land) {
+        max-width: 99rem;
+        padding: 0 3rem;
+     }
+     
     @include respond(tab-port) {
-        max-width: 45rem;
+        max-width: 50rem;
         padding: 0 3rem;
      }
 
+     @include respond(phone) {
+        max-width: 45rem;
+        padding: 0 2rem;
+      }
+
+     
     @include clearfix;
 
     [class^="col-"] {
